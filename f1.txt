@@ -1,0 +1,27 @@
+
+
+ 1-É importante porque ele serve para acompanhar as coisas e o desenvolvimento do sites, uma ferramente que usamos é o GIt que 
+e comunmente ultilizado para isso.
+
+2- (B) Git Commit
+
+3- Ele possiblita que os participantes criem uma ramificão para trabalarem em partes diferantes com suas 
+ediçaões sem que o projeto dos dois seja afetadas, ao final do projeto onde tudo ja esteja preparado
+podem juntar uma com a outra como codigo principal a  abordagem distribuída, que permite a cada desenvolvedor
+ter uma cópia completa do histórico do projeto, proporciona flexibilidade e robustez. esses foram criados
+para ser facil e raapido de ser utilizado.
+
+
+4- (B) git reset
+
+5- (A) git diff
+
+6-o commit cria uma foto e o push ele envia as fotografias para o git
+
+7-
+
+8- (C) git push
+
+9- (A) git merge
+
+10-
