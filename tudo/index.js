@@ -5,61 +5,32 @@ gsap.to(`.car`, {
 console.log(`a`)
 
 
-function validform () {
-const email = document.getElementById('email');
-let emailText = email.value.trim();
-let valido = false;
-if (emailText.includes ("@")) {
-valido = true;
-}
-else {
-valido = false;
-}
+function validaForm() {
+    let erros = [];
 
+    const nome = document.getElementById("nome").value.trim();
+    if (nome.length < 3) {
+        erros.push("O nome deve ter pelo menos 3 caracteres.");
+    }
 
-let partesEmail = emailText.split ("@");
-if (partesEmail[0].length >=7 && partesEmail[0].length <= 127) {
-    valido = true;
-}
-else {
-valido = false;
+    const email = document.getElementById("email").value.trim();
+    if (!email.includes("@") || email.split("@")[0].length < 7) {
+        erros.push("Email inválido! A parte antes do @ precisa ter pelo menos 7 caracteres.");
+    }
 
-}
+    const mensagem = document.getElementById("mensagem").value.trim();
+    if (mensagem === "") {
+        erros.push("O campo mensagem não pode estar vazio.");
+    }
 
-
-const nome = document.getElementById ("nome");
-let nomeText = nome.value.trim();
-if(nome.length >= 3){
-console.log ("nome atende ao tamanho minino")
-}{
-valido = true;
-}
-else {
-valido = false;
-
+    if (erros.length > 0) {
+        alert("Por favor, corrija os erros:\n\n" + erros.join("\n"));
+    } else {
+        alert("Recebemos sua mensagem! Obrigado.");
+    }
 }
 
-
-const textArea = document.getElementById("mensagem")
-let textTexto = textArea.value.trim ();
-if (textTexto !== ""){
-    {
-        valido = true;
-        }
-        else {
-        valido = false;
-        }
-
-        function validform(){
-
-
-        }
-
-document.addEventListener ("submit", function(e){
-e.preventDefault();
-validform ();
-
-})
-
-
-}
+document.addEventListener("submit", function (e) {
+    e.preventDefault();
+    validaForm();
+});
